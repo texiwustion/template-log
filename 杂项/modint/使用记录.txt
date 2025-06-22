@@ -1,0 +1,12 @@
+# 计算带模公式
+
+Z r = route[i][j];
+if(r.x < 4) continue;
+Z x = r * (r - 1) * (r - 2) * (r - 3) / 24;
+Z d1 = deg[i] - 4, d2 = deg[j] - 4;
+Z y = (d1 * (d1 - 1) / 2 + d2 * (d2 - 1) / 2);
+
+# 输出数值
+
+Z a = 4;
+cout << a << '\n';
