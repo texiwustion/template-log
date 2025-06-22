@@ -1,0 +1,13 @@
+# 辅助sg计算，sg=mex(suf)
+
+int n, k;
+const int MXN = 1e5 + 7;
+int sg[MXN];
+int getsg(int x) {
+    if (sg[x] != -1) return sg[x];
+    if (x == 0 || x == k + 1) return sg[x] = 0;
+    if (x <= k) return sg[x] = 1;
+    vector<int> suf;
+    for (int i = 1; i < x - k; ++i) suf.push_back(getsg(i) ^ getsg(x - k - i));
+    return sg[x] = mex(suf);
+}
