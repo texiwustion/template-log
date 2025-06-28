@@ -3,7 +3,7 @@
 https://www.luogu.com.cn/problem/P1471
 
 代码复用了sum_segment_tree模板内容，实现区间平均数和方差的计算
-'''cpp
+```cpp
 int main()
 {
     int n, m;
