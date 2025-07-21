@@ -1,0 +1,11 @@
+插入并回溯（2025杭电2，1012，子集，线性基+爆搜）
+带O(1) undo可以减少重建
+auto rec = basis.insert(a[i]);       // 选 i（rec会在rec.se!=-1时记录哪个基被改了）
+if(i + 2 <= n) dfs(i + 2, basis);    // 下一选 i+2
+if(i + 3 <= n) dfs(i + 3, basis);    // 下一选 i+3
+else dfs(n + 1, basis);              // 没下一个必选，直接结算
+basis.undo(rec.second);              // 回溯（把b[rec.se]=0即可）
+
+求最大子集异或，以及最小非空子集异或
+最小子集异或固定是0
+用【普通】的两个工具函数即可
