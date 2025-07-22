@@ -1,3 +1,15 @@
 # 整数快读
 
 int n = rd();
+
+# 字符串快写(1e5规模必用快写，2025牛客3：E(-11)280'，每次十连重测)
+
+#define yes (fw.str("YES\n"))
+#define no (fw.str("NO\n"))
+
+bool ok;
+ok?yes:no;
+
+附上测试方案：
+clock_t st=clock();
+clock()-st放在输出之后，输出测依次，define改成void测一次
