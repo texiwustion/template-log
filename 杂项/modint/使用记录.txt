@@ -13,3 +13,7 @@ cout << a << '\n';
 # N不能比模大
 
 不然就会报错
+
+# <<重载的函数签名必须是 
+ostream &operator<<(ostream &os, const MInt &a)
+带const

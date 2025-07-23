@@ -58,7 +58,7 @@ struct MInt {
         a = MInt(v);
         return is;
     }
-    friend constexpr ostream &operator<<(ostream &os, MInt &a) {
+    friend constexpr ostream &operator<<(ostream &os, const MInt &a) {
         os << a.x;
         return os;
     }
